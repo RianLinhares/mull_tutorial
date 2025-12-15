@@ -592,12 +592,16 @@ mull-runner-19 ./test_calc \
 O Mull pode classificar mutantes como:
 
 - Mortos
+  O teste detectou a falha introduzida pelo mutante
 
-- Vivos 
+- Vivos
+  O teste não detectou a falha
 
 - Timeout
+  A execução do mutante excedeu o tempo limite configurado
 
 - Crash
+  O mutante causou falha na execução do programa
 
 ### 📈 Mutation Score
 
@@ -626,3 +630,13 @@ Para visualizar todas as opções disponíveis do `mull-runner`, execute:
 mull-runner-19 --help
 
 ```
+
+### ⚠️ Limitações do Mull
+
+Apesar de ser uma ferramenta poderosa, o Mull possui algumas limitações importantes:
+
+- Não suporta diretamente projetos compilados com GCC
+
+- Requer uso do Clang/LLVM
+
+- Não possui integração nativa com Maven ou Gradle
